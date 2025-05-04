@@ -55,7 +55,7 @@ export function SettingsApp() {
 
     return (
         <div className="flex flex-col h-full bg-[#202020] text-white">
-            {/* Header with back button and title */}
+
             <div className="flex items-center p-2 px-4 gap-4 bg-[#2D2D2D]">
                 <button className="p-1 rounded-full hover:bg-[#3D3D3D] transition-colors">
                     <ChevronLeft className="w-5 h-5" />
@@ -63,22 +63,20 @@ export function SettingsApp() {
                 <span className="font-medium">Paramètres</span>
             </div>
 
-            {/* Main content */}
             <div className="flex flex-1 overflow-hidden">
-                {/* Sidebar */}
+
                 <div className="w-[350px] bg-[#2D2D2D] overflow-y-auto">
-                    {/* User profile */}
+
                     <div className="p-4 flex items-center gap-3">
                         <div className="w-12 h-12 rounded-full bg-gray-400 overflow-hidden">
-                            <Image src="/images/user.png" alt="User" width={48} height={48} className="w-full h-full object-cover" />
+                            <Image src="/images/profil.WEBP" alt="User" width={48} height={48} className="w-full h-full object-cover" />
                         </div>
                         <div>
                             <div className="font-medium">Anelka MD</div>
-                            <div className="text-sm text-gray-400">anelkamd243@gmail.com</div>
+                            <div className="text-sm text-gray-400">anelkadevs@gmail.com</div>
                         </div>
                     </div>
 
-                    {/* Search */}
                     <div className="px-4 pb-4">
                         <div className="relative">
                             <input
@@ -92,7 +90,6 @@ export function SettingsApp() {
                         </div>
                     </div>
 
-                    {/* Categories */}
                     <div className="px-2">
                         {categories.map((category) => (
                             <button
@@ -111,13 +108,11 @@ export function SettingsApp() {
                     </div>
                 </div>
 
-                {/* Content area */}
                 <div className="flex-1 overflow-y-auto p-6">
                     <h1 className="text-2xl font-semibold mb-6">Accueil</h1>
 
-                    {/* Computer info and status */}
                     <div className="grid grid-cols-3 gap-4 mb-6">
-                        {/* Computer info */}
+
                         <div className="bg-[#333333] rounded-lg p-4 flex items-center gap-4">
                             <div className="w-16 h-16 bg-[#444444] rounded-md flex items-center justify-center">
                                 <Image
@@ -139,7 +134,6 @@ export function SettingsApp() {
                             </div>
                         </div>
 
-                        {/* WiFi status */}
                         <div className="bg-[#333333] rounded-lg p-4 flex items-center gap-4">
                             <div className="w-10 h-10 rounded-full bg-[#444444] flex items-center justify-center">
                                 <Wifi className="w-5 h-5 text-[#0078D7]" />
@@ -150,7 +144,6 @@ export function SettingsApp() {
                             </div>
                         </div>
 
-                        {/* Windows Update */}
                         <div className="bg-[#333333] rounded-lg p-4 flex items-center gap-4">
                             <div className="w-10 h-10 rounded-full bg-[#444444] flex items-center justify-center">
                                 <div className="w-5 h-5 text-[#0078D7] flex items-center justify-center">
@@ -176,7 +169,6 @@ export function SettingsApp() {
                         </div>
                     </div>
 
-                    {/* Activation notice */}
                     <div className="bg-[#333333] rounded-lg p-4 mb-6 flex items-center gap-3">
                         <Info className="w-5 h-5 text-[#0078D7]" />
                         <div className="flex-1">Vous devez activer Windows pour pouvoir personnaliser votre PC.</div>
@@ -185,7 +177,6 @@ export function SettingsApp() {
                         </button>
                     </div>
 
-                    {/* Recommended settings */}
                     <div className="bg-[#333333] rounded-lg p-4 mb-6">
                         <h2 className="text-lg font-medium mb-1">Paramètres recommandés</h2>
                         <p className="text-sm text-gray-400 mb-4">Paramètres récents et couramment utilisés</p>
@@ -204,7 +195,6 @@ export function SettingsApp() {
                         ))}
                     </div>
 
-                    {/* Cloud storage */}
                     <div className="bg-[#333333] rounded-lg p-4 mb-6">
                         <div className="flex items-center gap-2 mb-4">
                             <Cloud className="w-5 h-5 text-[#0078D7]" />
@@ -212,7 +202,7 @@ export function SettingsApp() {
                         </div>
 
                         <p className="text-sm mb-4">
-                            Assurez-vous d'être connecté avec <span className="text-white">anelkamd243@gmail.com</span> pour afficher
+                            Assurez-vous d'être connecté avec <span className="text-white">anelkadevs@gmail.com</span> pour afficher
                             les détails de votre stockage ici.
                         </p>
 
@@ -221,7 +211,6 @@ export function SettingsApp() {
                         </button>
                     </div>
 
-                    {/* Bluetooth devices */}
                     <div className="bg-[#333333] rounded-lg p-4">
                         <div className="flex items-center gap-2 mb-2">
                             <Bluetooth className="w-5 h-5 text-[#0078D7]" />
@@ -230,7 +219,6 @@ export function SettingsApp() {
 
                         <p className="text-sm mb-4">Gérer, ajouter et supprimer des appareils</p>
 
-                        {/* Bluetooth toggle */}
                         <div className="flex items-center justify-between py-3 border-t border-[#444444]">
                             <div className="flex items-center gap-3">
                                 <Bluetooth className="w-5 h-5 text-[#0078D7]" />
@@ -245,7 +233,6 @@ export function SettingsApp() {
                             </label>
                         </div>
 
-                        {/* AirPods */}
                         <div className="flex items-center justify-between py-3 border-t border-[#444444]">
                             <div className="flex items-center gap-3">
                                 <div className="w-5 h-5 flex items-center justify-center">
