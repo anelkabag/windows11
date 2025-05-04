@@ -27,9 +27,9 @@ export function SearchPanel() {
         <AppIcon name="Edge" icon="/images/edge.png" onClick={() => {}} />
         <AppIcon name="Mail" icon="/images/mail.png" onClick={() => {}} />
         <AppIcon name="Calendar" icon="/images/calendar.png" onClick={() => {}} />
-        <AppIcon name="Store" icon="/images/store.png" onClick={() => {}} />
-        <AppIcon name="Photos" icon="/images/photos.png" onClick={() => {}} />
-        <AppIcon name="Settings" icon="/images/settings.png" onClick={() => {}} />
+        <AppIcon name="Store" icon="/images/IconStore.png" onClick={() => {}} />
+        <AppIcon name="Photos" icon="/images/IconPhotos.png" onClick={() => {}} />
+        <AppIcon name="Settings" icon="/images/IconSetting.png" onClick={() => {}} />
       </div>
     </motion.div>
   )
