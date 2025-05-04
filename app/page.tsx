@@ -5,7 +5,6 @@ import { Battery, Wifi, Volume2, BellRing, ChevronUp, Search } from "lucide-reac
 import { AnimatePresence } from "framer-motion"
 import Image from "next/image"
 
-// Import components
 import { DesktopIcon } from "@/components/desktop-icon"
 import { TaskbarIcon } from "@/components/taskbar-icon"
 import { StartMenu } from "@/components/start-menu"
@@ -104,7 +103,6 @@ export default function Windows11() {
     setCurrentMedia((prev) => ({ ...prev, isPlaying: !prev.isPlaying }))
   }
 
-  // Fonction pour rendre le contenu de la fenêtre en fonction de l'application
   const renderAppContent = () => {
     switch (activeWindow) {
       case "Microsoft Store":
@@ -116,7 +114,6 @@ export default function Windows11() {
     }
   }
 
-  // Fonction pour déterminer les dimensions initiales de la fenêtre
   const getWindowDimensions = () => {
     switch (activeWindow) {
       case "Microsoft Store":
@@ -134,7 +131,7 @@ export default function Windows11() {
       <div className="relative h-screen w-full overflow-hidden bg-[#0078D7] select-none">
         {/* Wallpaper */}
         <div className="absolute inset-0 z-0">
-          <Image src="/images/windows-wallpaper.jpg" alt="Windows 11 Wallpaper" fill className="object-cover" priority />
+          <Image src="/images/background.png" alt="Windows 11 Wallpaper" fill className="object-cover" priority />
         </div>
 
         {/* Desktop Icons */}
@@ -143,10 +140,10 @@ export default function Windows11() {
           <DesktopIcon name="Microsoft Edge" icon="/images/edge.png" onClick={() => openWindow("Microsoft Edge")} />
           <DesktopIcon
               name="File Explorer"
-              icon="/images/file-explorer.png"
+              icon="/images/IconFolder.png"
               onClick={() => openWindow("File Explorer")}
           />
-          <DesktopIcon name="Settings" icon="/images/settings.png" onClick={() => openWindow("Settings")} />
+          <DesktopIcon name="Settings" icon="/images/IconSetting.png" onClick={() => openWindow("Settings")} />
         </div>
 
         {/* Active Window */}
@@ -165,7 +162,7 @@ export default function Windows11() {
                 onClick={toggleStartMenu}
                 className={`p-2 rounded-md transition-all duration-200 ${startMenuOpen ? "bg-white/20" : "hover:bg-white/10"}`}
             >
-              <Image src="/images/windows-logo.png" alt="Start" width={24} height={24} className="w-6 h-6" />
+              <Image src="/images/IconWindows.png" alt="Start" width={24} height={24} className="w-6 h-6" />
             </button>
 
             <button
@@ -183,57 +180,58 @@ export default function Windows11() {
                 onClick={() => openWindow("Microsoft Edge")}
             />
             <TaskbarIcon
-                icon="/images/file-explorer.png"
+                icon="/images/IconFolder.png"
                 active={activeWindow === "File Explorer"}
                 onClick={() => openWindow("File Explorer")}
             />
             <TaskbarIcon
-                icon="/images/store.png"
+                icon="/images/IconStore.png"
                 active={activeWindow === "Microsoft Store"}
                 onClick={() => openWindow("Microsoft Store")}
             />
             <TaskbarIcon
-                icon="/images/settings.png"
+                icon="/images/IconSetting.png"
                 active={activeWindow === "Settings"}
                 onClick={() => openWindow("Settings")}
             />
           </div>
 
           <div className="flex items-center gap-1" ref={wrapperRef}>
+            <button className="p-1 rounded-md hover:bg-white/10 transition-all duration-200">
+              <ChevronUp className="w-4 h-4 text-white"/>
+            </button>
             <button
                 onClick={toggleQuickSettings}
                 className={`p-1 rounded-md ${quickSettingsOpen ? "bg-white/20" : "hover:bg-white/10"} transition-all duration-200 flex items-center gap-2`}
             >
               <div className="flex items-center gap-2">
+
+                <Wifi className="w-4 h-4 text-white"/>
+                <Volume2 className="w-4 h-4 text-white"/>
                 <div className="flex items-center">
-                  <Battery className="w-4 h-4 text-white" />
+                  <Battery className="w-4 h-4 text-white"/>
                   <span className="text-white text-xs ml-1">21%</span>
                 </div>
-                <Wifi className="w-4 h-4 text-white" />
-                <Volume2 className="w-4 h-4 text-white" />
               </div>
-            </button>
-            <button
-                onClick={toggleNotifications}
-                className={`p-1 rounded-md ${notificationsOpen ? "bg-white/20" : "hover:bg-white/10"} transition-all duration-200`}
-            >
-              <BellRing className="w-4 h-4 text-white" />
             </button>
             <div className="text-white text-xs flex flex-col items-end ml-1">
               <span>{currentTime}</span>
               <span>{currentDate}</span>
             </div>
-            <button className="p-1 rounded-md hover:bg-white/10 transition-all duration-200">
-              <ChevronUp className="w-4 h-4 text-white" />
+            <button
+                onClick={toggleNotifications}
+                className={`p-1 rounded-md ${notificationsOpen ? "bg-white/20" : "hover:bg-white/10"} transition-all duration-200`}
+            >
+              <BellRing className="w-4 h-4 text-white"/>
             </button>
           </div>
         </div>
 
         {/* Start Menu */}
-        <AnimatePresence>{startMenuOpen && <StartMenu onAppClick={openWindow} />}</AnimatePresence>
+        <AnimatePresence>{startMenuOpen && <StartMenu onAppClick={openWindow}/>}</AnimatePresence>
 
         {/* Search Panel */}
-        <AnimatePresence>{searchOpen && <SearchPanel />}</AnimatePresence>
+        <AnimatePresence>{searchOpen && <SearchPanel/>}</AnimatePresence>
 
         {/* Notifications Panel */}
         <AnimatePresence>{notificationsOpen && <NotificationsPanel />}</AnimatePresence>
