@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useRef } from "react"
-import { motion } from "framer-motion"
+import { motion }  from "framer-motion"
 import { Minus, Maximize2, X } from "lucide-react"
 import Image from "next/image"
 
@@ -23,24 +23,21 @@ export function AppWindow({ title, onClose, children, initialWidth = 800, initia
 
   const handleMinimize = () => {
     setIsMinimized(true)
-    // Dans une implémentation complète, on pourrait ajouter la fenêtre à une liste de fenêtres minimisées
   }
 
   const handleMaximize = () => {
     setIsMaximized(!isMaximized)
-    // Réinitialiser la position lorsqu'on quitte le mode maximisé
     if (isMaximized) {
       setPosition({ x: 0, y: 0 })
     }
   }
 
   if (isMinimized) {
-    return null // La fenêtre est minimisée, on ne l'affiche pas
+    return null
   }
 
   return (
     <>
-      {/* Élément invisible pour les contraintes de drag */}
       <div ref={constraintsRef} className="absolute inset-0 pointer-events-none" />
 
       <motion.div
