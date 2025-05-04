@@ -76,7 +76,7 @@ export function MicrosoftStoreApp() {
 
   return (
     <div className="flex flex-col h-full bg-[#202020] text-white">
-      {/* Header with search */}
+
       <div className="flex items-center p-2 px-4 gap-4 bg-[#2D2D2D]">
         <Image src="/images/store.png" alt="Microsoft Store" width={24} height={24} className="w-6 h-6" />
         <span className="font-medium">Microsoft Store</span>
@@ -93,9 +93,8 @@ export function MicrosoftStoreApp() {
         <div className="w-8 h-8 rounded-full bg-gray-400 flex-shrink-0"></div>
       </div>
 
-      {/* Sidebar and content */}
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
+
         <div className="w-16 bg-[#2D2D2D] flex flex-col items-center py-2">
           <SidebarItem icon="/images/store/home-icon.png" label="Home" active />
           <SidebarItem icon="/images/store/gaming-icon.png" label="Gaming" />
@@ -105,12 +104,11 @@ export function MicrosoftStoreApp() {
           <SidebarItem icon="/images/store/library-icon.png" label="Library" />
         </div>
 
-        {/* Main content */}
         <div className="flex-1 overflow-y-auto p-4">
-          {/* Featured carousel */}
+
           <div className="relative mb-8">
             <div className="flex gap-4">
-              {/* Main featured item */}
+
               <div className="relative flex-1 h-72 rounded-lg overflow-hidden">
                 <Image
                   src={slides[activeSlide].image || "/placeholder.svg"}
@@ -133,7 +131,6 @@ export function MicrosoftStoreApp() {
                 </div>
               </div>
 
-              {/* Side featured items */}
               <div className="w-80 flex flex-col gap-4">
                 <div className="h-[140px] bg-blue-900 rounded-lg relative overflow-hidden">
                   <Image
@@ -168,7 +165,6 @@ export function MicrosoftStoreApp() {
               </div>
             </div>
 
-            {/* Carousel controls */}
             <button
               className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 rounded-full flex items-center justify-center"
               onClick={prevSlide}
@@ -182,7 +178,6 @@ export function MicrosoftStoreApp() {
               <ChevronRight className="w-5 h-5" />
             </button>
 
-            {/* Dots */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1">
               {slides.map((_, index) => (
                 <button
@@ -194,7 +189,6 @@ export function MicrosoftStoreApp() {
             </div>
           </div>
 
-          {/* Best selling games */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold flex items-center">
