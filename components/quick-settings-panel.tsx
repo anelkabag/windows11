@@ -58,13 +58,13 @@ export function QuickSettingsPanel({
                 <p className="text-white text-xs truncate">{currentMedia.title}</p>
                 <p className="text-white/70 text-xs">{currentMedia.author}</p>
               </div>
-              <Image src="/images/thumbnail.png" alt="Thumbnail" width={40} height={40} className="w-10 h-10 rounded" />
+              <Image src="/images/muniature.png" alt="cover youtube" width={40} height={40} className="w-10 h-10 rounded" />
             </div>
           </div>
         </div>
         <div className="flex justify-center gap-8 mt-3">
           <button className="text-white hover:bg-white/10 p-2 rounded-full transition-all">
-            <ChevronUp className="w-5 h-5 rotate-90" />
+            <ChevronUp className="w-5 h-5 -rotate-90" />
           </button>
           <button
             className="text-white hover:bg-white/10 p-2 rounded-full transition-all"
@@ -82,7 +82,7 @@ export function QuickSettingsPanel({
             )}
           </button>
           <button className="text-white hover:bg-white/10 p-2 rounded-full transition-all">
-            <ChevronUp className="w-5 h-5 -rotate-90" />
+            <ChevronUp className="w-5 h-5 rotate-90" />
           </button>
         </div>
       </div>
