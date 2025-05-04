@@ -30,15 +30,15 @@ export function StartMenu({ onAppClick }: StartMenuProps) {
 
           <div className="grid grid-cols-6 gap-4">
             <AppIcon name="Edge" icon="/images/edge.png" onClick={() => onAppClick("Microsoft Edge")} />
-            <AppIcon name="Mail" icon="/images/mail.png" onClick={() => onAppClick("Mail")} />
+            <AppIcon name="Outlook" icon="/images/IconOps.png" onClick={() => onAppClick("Mail")} />
             <AppIcon name="Calendar" icon="/images/calendar.png" onClick={() => onAppClick("Calendar")} />
-            <AppIcon name="Store" icon="/images/store.png" onClick={() => onAppClick("Microsoft Store")} />
-            <AppIcon name="Photos" icon="/images/photos.png" onClick={() => onAppClick("Photos")} />
-            <AppIcon name="Settings" icon="/images/settings.png" onClick={() => onAppClick("Settings")} />
+            <AppIcon name="Store" icon="/images/IconStore.png" onClick={() => onAppClick("Microsoft Store")} />
+            <AppIcon name="Photos" icon="/images/IconPhotos.png" onClick={() => onAppClick("Photos")} />
+            <AppIcon name="Settings" icon="/images/IconSetting.png" onClick={() => onAppClick("Settings")} />
             <AppIcon name="Office" icon="/images/office.png" onClick={() => onAppClick("Office")} />
             <AppIcon name="Xbox" icon="/images/xbox.png" onClick={() => onAppClick("Xbox")} />
-            <AppIcon name="Spotify" icon="/images/spotify.png" onClick={() => onAppClick("Spotify")} />
-            <AppIcon name="Netflix" icon="/images/netflix.png" onClick={() => onAppClick("Netflix")} />
+            <AppIcon name="Snipping tool" icon="/images/IconSnipping.png" onClick={() => onAppClick("Snipping")} />
+            <AppIcon name="office Word" icon="/images/IconWord.png" onClick={() => onAppClick("Netflix")} />
             <AppIcon name="Twitter" icon="/images/twitter.png" onClick={() => onAppClick("Twitter")} />
             <AppIcon name="Calculator" icon="/images/calculator.png" onClick={() => onAppClick("Calculator")} />
           </div>
@@ -54,26 +54,26 @@ export function StartMenu({ onAppClick }: StartMenuProps) {
 
           <div className="grid grid-cols-2 gap-2">
             <RecentItem
-              name="Document.docx"
-              icon="/images/word.png"
+              name="Objectif2025.docx"
+              icon="/images/IconWord.png"
               description="Modified today"
               onClick={() => onAppClick("Word")}
             />
             <RecentItem
-              name="Presentation.pptx"
-              icon="/images/powerpoint.png"
+              name="Presentation_Weka.pptx"
+              icon="/images/IconPowerP.png"
               description="Modified yesterday"
               onClick={() => onAppClick("PowerPoint")}
             />
             <RecentItem
-              name="Budget.xlsx"
-              icon="/images/excel.png"
+              name="Budget_Weka.xlsx"
+              icon="/images/IconExel.png"
               description="Modified 3 days ago"
               onClick={() => onAppClick("Excel")}
             />
             <RecentItem
-              name="Project.pdf"
-              icon="/images/pdf.png"
+              name="Project_Weka.pdf"
+              icon="/images/IconPDF.png"
               description="Modified last week"
               onClick={() => onAppClick("PDF Viewer")}
             />
@@ -83,8 +83,8 @@ export function StartMenu({ onAppClick }: StartMenuProps) {
 
       <div className="mt-2 p-2 flex justify-between items-center border-t border-white/10">
         <div className="flex items-center gap-2">
-          <Image src="/images/user.png" alt="User" width={32} height={32} className="w-8 h-8 rounded-full" />
-          <span className="text-white text-sm">User</span>
+          <Image src="/images/profil.WEBP" alt="User" width={32} height={32} className="w-8 h-8 rounded-full" />
+          <span className="text-white text-sm">Anelka MD</span>
         </div>
 
         <button className="text-white hover:bg-white/10 p-2 rounded-full transition-all">
