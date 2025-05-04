@@ -129,12 +129,11 @@ export default function Windows11() {
 
   return (
       <div className="relative h-screen w-full overflow-hidden bg-[#0078D7] select-none">
-        {/* Wallpaper */}
+
         <div className="absolute inset-0 z-0">
           <Image src="/images/background.png" alt="Windows 11 Wallpaper" fill className="object-cover" priority />
         </div>
 
-        {/* Desktop Icons */}
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-6">
           <DesktopIcon name="Recycle Bin" icon="/images/recycle-bin.png" onClick={() => openWindow("Recycle Bin")} />
           <DesktopIcon name="Microsoft Edge" icon="/images/edge.png" onClick={() => openWindow("Microsoft Edge")} />
@@ -146,7 +145,6 @@ export default function Windows11() {
           <DesktopIcon name="Settings" icon="/images/IconSetting.png" onClick={() => openWindow("Settings")} />
         </div>
 
-        {/* Active Window */}
         <AnimatePresence>
           {activeWindow && (
               <AppWindow title={activeWindow} onClose={closeWindow} initialWidth={windowWidth} initialHeight={windowHeight}>
@@ -155,7 +153,6 @@ export default function Windows11() {
           )}
         </AnimatePresence>
 
-        {/* Taskbar */}
         <div className="absolute bottom-0 left-0 right-0 h-12 bg-black/30 backdrop-blur-xl z-20 flex items-center px-3 justify-between border-t border-white/10">
           <div className="flex items-center gap-1">
             <button
@@ -227,16 +224,12 @@ export default function Windows11() {
           </div>
         </div>
 
-        {/* Start Menu */}
         <AnimatePresence>{startMenuOpen && <StartMenu onAppClick={openWindow}/>}</AnimatePresence>
 
-        {/* Search Panel */}
         <AnimatePresence>{searchOpen && <SearchPanel/>}</AnimatePresence>
 
-        {/* Notifications Panel */}
         <AnimatePresence>{notificationsOpen && <NotificationsPanel />}</AnimatePresence>
 
-        {/* Quick Settings Panel */}
         <AnimatePresence>
           {quickSettingsOpen && (
               <QuickSettingsPanel
