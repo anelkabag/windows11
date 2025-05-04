@@ -26,7 +26,7 @@ export function NotificationsPanel() {
           message="Your download has completed"
           time="Just now"
         />
-        <Notification app="Mail" icon="/images/mail.png" message="New email from John Doe" time="5 minutes ago" />
+        <Notification app="Mail" icon="/images/mail.png" message="New email from Lucien Aw" time="5 minutes ago" />
         <Notification
           app="Calendar"
           icon="/images/calendar.png"
