@@ -25,8 +25,8 @@ export default function Windows11() {
   const [quickSettingsOpen, setQuickSettingsOpen] = useState(false)
   const [activeWindow, setActiveWindow] = useState<string | null>(null)
   const [currentMedia, setCurrentMedia] = useState({
-    title: "Faire des ZOOMS de YOUTUBEURS sans...",
-    author: "Sam - Tutoriels",
+    title: "Cloner Windows 11 dans le navigateur...",
+    author: "Anelka MD - Software Enginner",
     isPlaying: true,
   })
   const [brightness, setBrightness] = useState(75)
