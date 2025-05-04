@@ -43,7 +43,7 @@ export function QuickSettingsPanel({
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.2 }}
     >
-      {/* Media Player */}
+
       <div className="p-3 border-b border-white/10">
         <div className="flex items-center gap-3">
           <div className="flex-shrink-0">
@@ -87,7 +87,6 @@ export function QuickSettingsPanel({
         </div>
       </div>
 
-      {/* Quick Settings Grid */}
       <div className="grid grid-cols-3 gap-1 p-1">
         <QuickSettingTile icon={<Wifi className="w-5 h-5" />} label="Fsociety-2G" active={true} hasDetails={true} />
         <QuickSettingTile
@@ -123,7 +122,6 @@ export function QuickSettingsPanel({
         />
       </div>
 
-      {/* Brightness Slider */}
       <div className="px-4 py-3 flex items-center gap-3">
         <Sun className="w-5 h-5 text-white flex-shrink-0" />
         <input
@@ -136,7 +134,6 @@ export function QuickSettingsPanel({
         />
       </div>
 
-      {/* Volume Slider */}
       <div className="px-4 py-3 flex items-center gap-3">
         <Volume2 className="w-5 h-5 text-white flex-shrink-0" />
         <input
@@ -152,14 +149,11 @@ export function QuickSettingsPanel({
         </button>
       </div>
 
-      {/* Activation Status */}
       <div className="p-4 border-t border-white/10">
-        <div className="text-white text-sm mb-1">Activer Windows</div>
-        <div className="text-white/70 text-xs">Accédez aux paramètres pour activer Windows</div>
         <div className="flex items-center justify-between mt-2">
           <div className="flex items-center gap-1">
-            <div className="w-4 h-4 bg-white/20 rounded-full flex items-center justify-center">
-              <span className="text-white text-[8px]">i</span>
+            <div className="w-4 h-4 flex items-center justify-center">
+              <Battery className="w-4 h-4 text-white"/>
             </div>
             <span className="text-white text-xs">21%</span>
           </div>
