@@ -18,15 +18,12 @@ import {
     MoreHorizontal,
     ChevronDown,
     X,
-    Maximize2,
-    Minus,
     Check,
     List,
 } from "lucide-react"
 
 export function FileExplorerApp() {
     const [selectedFile, setSelectedFile] = useState<string | null>("History of Skating")
-    const [viewMode, setViewMode] = useState<"grid" | "details">("grid")
 
     return (
         <div className="flex flex-col h-full bg-[#0c0c0c] text-white">
