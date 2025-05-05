@@ -172,7 +172,7 @@ export default function Windows11() {
             <div className="h-6 mx-1 border-r border-white/20" />
 
             <TaskbarIcon
-                icon="/images/edge.png"
+                icon="/images/IconEdge.png"
                 active={activeWindow === "Microsoft Edge"}
                 onClick={() => openWindow("Microsoft Edge")}
             />
