@@ -57,15 +57,15 @@ export function SearchPanel() {
                     <h3 className="text-white text-base font-medium mb-4">Recent</h3>
 
                     <div className="space-y-3">
-                        <RecentApp name="Get Started" icon="/images/get-started.png" />
+                        <RecentApp name="OneNote" icon="/images/IconOneNote.png" />
                         <RecentApp name="Photos" icon="/images/IconPhotos.png" />
-                        <RecentApp name="Microsoft Edge" icon="/images/edge.png" />
+                        <RecentApp name="Microsoft Edge" icon="/images/IconEdge.png" />
                         <RecentApp name="April Reading Book Club" icon="/images/IconWord.png" />
                         <RecentApp name="Microsoft Store" icon="/images/IconStore.png" />
                         <RecentApp name="Settings" icon="/images/IconSetting.png" />
-                        <RecentApp name="Family Reunion" icon="/images/IconPowerP.png" />
+                        <RecentApp name="Family Reunion" icon="/images/IconFilePowerP.png" />
                         <RecentApp name="Word" icon="/images/IconWord.png" />
-                        <RecentApp name="Paint" icon="/images/paint.png" />
+                        <RecentApp name="Paint" icon="/images/Iconpaint.png" />
                     </div>
                 </div>
 
@@ -126,8 +126,8 @@ export function SearchPanel() {
                             <div className="mb-4 relative rounded-lg overflow-hidden">
                                 <div className="aspect-[16/9] relative">
                                     <Image
-                                        src="/images/earth-day.jpg"
-                                        alt="Earth Day"
+                                        src="/images/cover1.jpg"
+                                        alt="Barcelona Fc"
                                         fill
                                         className="object-cover"
                                         onError={(e) => {
@@ -136,15 +136,15 @@ export function SearchPanel() {
                                         }}
                                     />
                                     <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                                        <h2 className="text-3xl font-bold text-white">Earth Day</h2>
+                                        <h2 className="text-3xl font-bold text-white">Barcelona Fc</h2>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="grid grid-cols-3 gap-3 mb-6">
-                                <FeatureCard title="Outdoors activities nearby" image="/images/outdoors.jpg" />
-                                <FeatureCard title="On this day: 1970" image="/images/history.jpg" />
-                                <FeatureCard title="Give with Bing" image="/images/bing.jpg" />
+                                <FeatureCard title="SNK Saison Final" image="/images/cover2.jpg" />
+                                <FeatureCard title="BMW M3: E30" image="/images/cover5.jpg" />
+                                <FeatureCard title="IPhone..." image="/images/cover3.jpg" />
                             </div>
 
                             <div className="bg-[#1c2333] rounded-lg p-4">
