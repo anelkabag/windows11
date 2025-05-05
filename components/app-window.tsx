@@ -22,7 +22,6 @@ export function AppWindow({ title, onClose, children, initialWidth = 800, initia
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
     const [isMounted, setIsMounted] = useState(false)
 
-    // Utiliser useEffect pour s'assurer que le code ne s'exécute que côté client
     useEffect(() => {
         setIsMounted(true)
     }, [])
@@ -61,12 +60,10 @@ export function AppWindow({ title, onClose, children, initialWidth = 800, initia
         setIsDragging(false)
     }
 
-    // Si la fenêtre est minimisée, ne pas la rendre
     if (isMinimized) {
         return null
     }
 
-    // Calculer le style de la fenêtre
     const windowStyle = !isMaximized
         ? {
             width: initialWidth,
