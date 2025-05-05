@@ -207,7 +207,6 @@ export default function Windows11() {
                 <Volume2 className="w-4 h-4 text-white"/>
                 <div className="flex items-center">
                   <Battery className="w-4 h-4 text-white"/>
-                  <span className="text-white text-xs ml-1">21%</span>
                 </div>
               </div>
             </button>
