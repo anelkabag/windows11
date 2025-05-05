@@ -16,10 +16,10 @@ export function MicrosoftStoreApp() {
       image: "/images/store/roblox-banner.jpg",
     },
     {
-      title: "Microsoft 365",
+      title: "Microsoft 365 Copilot",
       subtitle: "Boost your productivity",
       tag: "Subscription",
-      image: "/images/store/microsoft-365-banner.jpg",
+      image: "/images/store/coverCopilot.jpg",
     },
   ]
 
@@ -78,7 +78,7 @@ export function MicrosoftStoreApp() {
     <div className="flex flex-col h-full bg-[#202020] text-white">
 
       <div className="flex items-center p-2 px-4 gap-4 bg-[#2D2D2D]">
-        <Image src="/images/store.png" alt="Microsoft Store" width={24} height={24} className="w-6 h-6" />
+        <Image src="/images/IconStore.png" alt="Microsoft Store" width={24} height={24} className="w-6 h-6" />
         <span className="font-medium">Microsoft Store</span>
         <div className="relative flex-1 mx-4">
           <input
@@ -90,7 +90,7 @@ export function MicrosoftStoreApp() {
           />
           <Search className="absolute right-2 top-1.5 w-4 h-4 text-gray-400" />
         </div>
-        <div className="w-8 h-8 rounded-full bg-gray-400 flex-shrink-0"></div>
+        <Image src="/images/profil.WEBP" alt="User" width={32} height={32} className="w-8 h-8 rounded-full" />
       </div>
 
       <div className="flex flex-1 overflow-hidden">
@@ -104,7 +104,7 @@ export function MicrosoftStoreApp() {
           <SidebarItem icon="/images/store/library-icon.png" label="Library" />
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4">
+        <div className="flex-1 overflow-y-hidden p-3">
 
           <div className="relative mb-8">
             <div className="flex gap-4">
@@ -134,13 +134,13 @@ export function MicrosoftStoreApp() {
               <div className="w-80 flex flex-col gap-4">
                 <div className="h-[140px] bg-blue-900 rounded-lg relative overflow-hidden">
                   <Image
-                    src="/images/store/microsoft-365-banner.jpg"
-                    alt="Microsoft 365"
+                    src="/images/store/coverCopilot1.jpg"
+                    alt="Microsoft 365 Copilot"
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-xl font-bold">Microsoft 365</h3>
+                    <h3 className="text-xl font-bold text-black/80">Microsoft 365 Copilot</h3>
                   </div>
                 </div>
                 <div className="flex gap-4">
