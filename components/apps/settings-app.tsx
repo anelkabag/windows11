@@ -54,9 +54,9 @@ export function SettingsApp() {
     ]
 
     return (
-        <div className="flex flex-col h-full bg-[#202020] text-white">
+        <div className="flex flex-col h-full bg-[#191919] text-white">
 
-            <div className="flex items-center p-2 px-4 gap-4 bg-[#2D2D2D]">
+            <div className="flex items-center p-2 px-4 gap-4 bg-[#191919]">
                 <button className="p-1 rounded-full hover:bg-[#3D3D3D] transition-colors">
                     <ChevronLeft className="w-5 h-5" />
                 </button>
@@ -65,7 +65,7 @@ export function SettingsApp() {
 
             <div className="flex flex-1 overflow-hidden">
 
-                <div className="w-[250px] bg-[#2D2D2D] overflow-y-auto">
+                <div className="w-[250px] bg-[#191919] overflow-y-auto">
 
                     <div className="p-4 flex items-center gap-3">
                         <div className="w-12 h-12 rounded-full bg-gray-400 overflow-hidden">
@@ -114,9 +114,9 @@ export function SettingsApp() {
                     <div className="grid grid-cols-3 gap-4 mb-6">
 
                         <div className="bg-[#333333] rounded-lg p-4 flex items-center gap-4">
-                            <div className="w-16 h-16 bg-[#444444] rounded-md flex items-center justify-center">
+                            <div className="w-16 h-16 rounded-md flex items-center justify-center">
                                 <Image
-                                    src="/images/computer.png"
+                                    src="/images/IconfoldePC.png"
                                     alt="Computer"
                                     width={40}
                                     height={40}
