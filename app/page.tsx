@@ -25,8 +25,8 @@ export default function Windows11() {
   const [quickSettingsOpen, setQuickSettingsOpen] = useState(false)
   const [activeWindow, setActiveWindow] = useState<string | null>(null)
   const [currentMedia, setCurrentMedia] = useState({
-    title: "Cloner Windows 11 dans le navigateur...",
-    author: "Anelka MD - Software Enginner",
+    title: "J'ai recoder Windows 11 dans le navigateur...",
+    author: "Anelka MD - YouTube ",
     isPlaying: true,
   })
   const [brightness, setBrightness] = useState(75)
@@ -140,7 +140,7 @@ export default function Windows11() {
         </div>
 
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-6">
-          <DesktopIcon name="Recycle Bin" icon="/images/recycle-bin.png" onClick={() => openWindow("Recycle Bin")} />
+          <DesktopIcon name="White Bord" icon="/images/IconWhiteBord.png" onClick={() => openWindow("White Bord")} />
           <DesktopIcon name="Microsoft Edge" icon="/images/IconEdge.png" onClick={() => openWindow("Microsoft Edge")} />
           <DesktopIcon name="File Explorer" icon="/images/IconFolder.png" onClick={() => openWindow("File Explorer")} />
           <DesktopIcon name="Settings" icon="/images/IconSetting.png" onClick={() => openWindow("Settings")} />
