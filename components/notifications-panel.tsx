@@ -22,14 +22,19 @@ export function NotificationsPanel() {
       <div className="space-y-3">
         <Notification
           app="Microsoft Edge"
-          icon="/images/edge.png"
+          icon="/images/IconEdge.png"
           message="Your download has completed"
           time="Just now"
         />
-        <Notification app="Mail" icon="/images/mail.png" message="New email from Lucien Aw" time="5 minutes ago" />
+        <Notification
+            app="Microsoft Edge"
+            icon="/images/IconEdge.png"
+            message="New email from Lucien Aw"
+            time="5 minutes ago"
+        />
         <Notification
           app="Calendar"
-          icon="/images/calendar.png"
+          icon="/images/IconCalendar.png"
           message="Meeting in 15 minutes"
           time="10 minutes ago"
         />
