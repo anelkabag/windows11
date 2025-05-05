@@ -25,7 +25,6 @@ export function SearchPanel() {
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.2 }}
         >
-            {/* Search bar at the top */}
             <div className="p-4 border-b border-[#2d3646]">
                 <div className="relative">
                     <input
@@ -53,7 +52,7 @@ export function SearchPanel() {
             </div>
 
             <div className="flex h-full">
-                {/* Left sidebar with recent apps */}
+
                 <div className="w-[200px] p-4 border-r border-[#2d3646]">
                     <h3 className="text-white text-base font-medium mb-4">Recent</h3>
 
@@ -70,9 +69,7 @@ export function SearchPanel() {
                     </div>
                 </div>
 
-                {/* Main content area */}
                 <div className="flex-1 p-4">
-                    {/* Header with date and user */}
                     <div className="flex justify-between items-center mb-4">
                         <div className="text-white/70 text-sm">Today • {formattedDate}</div>
                         <div className="flex items-center gap-2">
@@ -99,12 +96,10 @@ export function SearchPanel() {
                     </div>
 
                     {searchQuery ? (
-                        // Search results when query exists
+
                         <div className="py-4">
                             <h3 className="text-white text-lg font-medium mb-4">Search results for "{searchQuery}"</h3>
-
                             <div className="grid grid-cols-2 gap-4">
-                                {/* This would be populated with actual search results */}
                                 <div className="bg-[#1c2333] rounded-lg p-4 flex items-center gap-3">
                                     <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center">
                                         <Image src="/images/IconSetting.png" alt="Settings" width={40} height={40} className="w-10 h-10" />
@@ -127,9 +122,7 @@ export function SearchPanel() {
                             </div>
                         </div>
                     ) : (
-                        // Default content when no search query
                         <>
-                            {/* Earth Day feature */}
                             <div className="mb-4 relative rounded-lg overflow-hidden">
                                 <div className="aspect-[16/9] relative">
                                     <Image
@@ -148,14 +141,12 @@ export function SearchPanel() {
                                 </div>
                             </div>
 
-                            {/* Feature cards */}
                             <div className="grid grid-cols-3 gap-3 mb-6">
                                 <FeatureCard title="Outdoors activities nearby" image="/images/outdoors.jpg" />
                                 <FeatureCard title="On this day: 1970" image="/images/history.jpg" />
                                 <FeatureCard title="Give with Bing" image="/images/bing.jpg" />
                             </div>
 
-                            {/* Trending searches */}
                             <div className="bg-[#1c2333] rounded-lg p-4">
                                 <div className="flex items-center gap-2 mb-3">
                                     <TrendingUp className="w-4 h-4 text-white/70" />
