@@ -65,7 +65,7 @@ export function SettingsApp() {
 
             <div className="flex flex-1 overflow-hidden">
 
-                <div className="w-[350px] bg-[#2D2D2D] overflow-y-auto">
+                <div className="w-[250px] bg-[#2D2D2D] overflow-y-auto">
 
                     <div className="p-4 flex items-center gap-3">
                         <div className="w-12 h-12 rounded-full bg-gray-400 overflow-hidden">
@@ -259,7 +259,6 @@ export function SettingsApp() {
                         </div>
                     </div>
 
-                    {/* Account security */}
                     <div className="bg-[#333333] rounded-lg p-4 mt-6">
                         <div className="flex items-center gap-2 mb-4">
                             <Check className="w-5 h-5 text-[#0078D7]" />
