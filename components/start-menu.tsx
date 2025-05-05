@@ -29,18 +29,18 @@ export function StartMenu({ onAppClick }: StartMenuProps) {
           </div>
 
           <div className="grid grid-cols-6 gap-4">
-            <AppIcon name="Edge" icon="/images/edge.png" onClick={() => onAppClick("Microsoft Edge")} />
+            <AppIcon name="Edge" icon="/images/IconEdge.png" onClick={() => onAppClick("Microsoft Edge")} />
             <AppIcon name="Outlook" icon="/images/IconOps.png" onClick={() => onAppClick("Mail")} />
-            <AppIcon name="Calendar" icon="/images/calendar.png" onClick={() => onAppClick("Calendar")} />
+            <AppIcon name="Calendar" icon="/images/IconCalendar.png" onClick={() => onAppClick("Calendar")} />
             <AppIcon name="Store" icon="/images/IconStore.png" onClick={() => onAppClick("Microsoft Store")} />
             <AppIcon name="Photos" icon="/images/IconPhotos.png" onClick={() => onAppClick("Photos")} />
             <AppIcon name="Settings" icon="/images/IconSetting.png" onClick={() => onAppClick("Settings")} />
-            <AppIcon name="Office" icon="/images/office.png" onClick={() => onAppClick("Office")} />
-            <AppIcon name="Xbox" icon="/images/xbox.png" onClick={() => onAppClick("Xbox")} />
+            <AppIcon name="MS Office 360" icon="/images/IconOffice.png" onClick={() => onAppClick("Office")} />
+            <AppIcon name="Xbox" icon="/images/IconXbox.png" onClick={() => onAppClick("Xbox")} />
             <AppIcon name="Snipping tool" icon="/images/IconSnipping.png" onClick={() => onAppClick("Snipping")} />
             <AppIcon name="office Word" icon="/images/IconWord.png" onClick={() => onAppClick("Netflix")} />
-            <AppIcon name="Twitter" icon="/images/twitter.png" onClick={() => onAppClick("Twitter")} />
-            <AppIcon name="Calculator" icon="/images/calculator.png" onClick={() => onAppClick("Calculator")} />
+            <AppIcon name="Netflix" icon="/images/IconNetflix.png" onClick={() => onAppClick("Netflix")} />
+            <AppIcon name="Calculator" icon="/images/IconCalculator.png" onClick={() => onAppClick("Calculator")} />
           </div>
         </div>
 
@@ -55,19 +55,19 @@ export function StartMenu({ onAppClick }: StartMenuProps) {
           <div className="grid grid-cols-2 gap-2">
             <RecentItem
               name="Objectif2025.docx"
-              icon="/images/IconWord.png"
+              icon="/images/IconFileWord.png"
               description="Modified today"
               onClick={() => onAppClick("Word")}
             />
             <RecentItem
               name="Presentation_Weka.pptx"
-              icon="/images/IconPowerP.png"
+              icon="/images/IconFilePowerP.png"
               description="Modified yesterday"
               onClick={() => onAppClick("PowerPoint")}
             />
             <RecentItem
               name="Budget_Weka.xlsx"
-              icon="/images/IconExel.png"
+              icon="/images/IconFileExcel.png"
               description="Modified 3 days ago"
               onClick={() => onAppClick("Excel")}
             />
