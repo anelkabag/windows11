@@ -47,11 +47,11 @@ export function QuickSettingsPanel({
       <div className="p-3 border-b border-white/10">
         <div className="flex items-center gap-3">
           <div className="flex-shrink-0">
-            <Image src="/images/arc-logo.png" alt="Arc" width={24} height={24} className="w-6 h-6" />
+            <Image src="/images/IconEdge.png" alt="Arc" width={24} height={24} className="w-6 h-6" />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center justify-between">
-              <span className="text-white text-sm font-medium">Arc</span>
+              <span className="text-white text-sm font-medium">Edge</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="flex-1 min-w-0">
