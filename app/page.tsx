@@ -192,6 +192,11 @@ export default function Windows11() {
                 active={activeWindow === "Settings"}
                 onClick={() => openWindow("Settings")}
             />
+            <TaskbarIcon
+                icon="/images/IconVSCode.png"
+                active={activeWindow === "VSCodes"}
+                onClick={() => openWindow("VSCodes")}
+            />
           </div>
 
           <div className="flex items-center gap-1" ref={wrapperRef}>
