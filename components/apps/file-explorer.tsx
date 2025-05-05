@@ -127,10 +127,9 @@ export function FileExplorerApp() {
                 </button>
             </div>
 
-            {/* Main content */}
+
             <div className="flex flex-1 overflow-hidden">
-                {/* Sidebar */}
-                <div className="w-[300px] bg-[#191919] overflow-y-auto border-r border-[#333]">
+                <div className="w-[200px] bg-[#191919] overflow-y-auto border-r border-[#333]">
                     <div className="p-2">
                         <div className="mb-4">
                             <SidebarItem icon="/images/IconFoldeHome.png" label="Home" />
@@ -158,7 +157,6 @@ export function FileExplorerApp() {
                         </div>
                     </div>
                 </div>
-
 
                 <div className="flex-1 overflow-y-auto p-4">
                     <div className="grid grid-cols-6 gap-4">
