@@ -173,7 +173,7 @@ export function FileExplorerApp() {
                         />
                         <FileItem
                             type="folder"
-                            name="ISIG LIC3"
+                            name="ISIG GOMA"
                             icon="/images/IconFoldeF1.png"
                             selected={selectedFile === "ISIG LIC3"}
                             onClick={() => setSelectedFile("Fonts")}
