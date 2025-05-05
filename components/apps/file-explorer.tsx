@@ -162,7 +162,7 @@ export function FileExplorerApp() {
                             name="G-SoluTech"
                             icon="/images/IconFoldeF1.png"
                             selected={selectedFile === "G-SoluTech"}
-                            onClick={() => setSelectedFile("Adobe")}
+                            onClick={() => setSelectedFile("G-SoluTech")}
                         />
                         <FileItem
                             type="folder"
@@ -176,7 +176,7 @@ export function FileExplorerApp() {
                             name="ISIG GOMA"
                             icon="/images/IconFoldeF1.png"
                             selected={selectedFile === "ISIG LIC3"}
-                            onClick={() => setSelectedFile("Fonts")}
+                            onClick={() => setSelectedFile("ISIG LIC3")}
                         />
                         <FileItem
                             type="file"
