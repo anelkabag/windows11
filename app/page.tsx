@@ -197,12 +197,14 @@ export default function Windows11() {
             <button className="p-1 rounded-md hover:bg-white/10 transition-all duration-200">
               <ChevronUp className="w-4 h-4 text-white"/>
             </button>
+            <button className="p-1 rounded-md hover:bg-white/10 transition-all duration-200">
+              <span className="text-white text-xs ml-1">ENG</span>
+            </button>
             <button
                 onClick={toggleQuickSettings}
                 className={`p-1 rounded-md ${quickSettingsOpen ? "bg-white/20" : "hover:bg-white/10"} transition-all duration-200 flex items-center gap-2`}
             >
               <div className="flex items-center gap-2">
-
                 <Wifi className="w-4 h-4 text-white"/>
                 <Volume2 className="w-4 h-4 text-white"/>
                 <div className="flex items-center">
