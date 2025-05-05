@@ -136,7 +136,7 @@ export default function Windows11() {
 
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-6">
           <DesktopIcon name="Recycle Bin" icon="/images/recycle-bin.png" onClick={() => openWindow("Recycle Bin")} />
-          <DesktopIcon name="Microsoft Edge" icon="/images/edge.png" onClick={() => openWindow("Microsoft Edge")} />
+          <DesktopIcon name="Microsoft Edge" icon="/images/IconEdge.png" onClick={() => openWindow("Microsoft Edge")} />
           <DesktopIcon
               name="File Explorer"
               icon="/images/IconFolder.png"
