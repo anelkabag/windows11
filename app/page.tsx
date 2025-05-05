@@ -194,8 +194,8 @@ export default function Windows11() {
             />
             <TaskbarIcon
                 icon="/images/IconVSCode.png"
-                active={activeWindow === "VSCodes"}
-                onClick={() => openWindow("VSCodes")}
+                active={activeWindow === "VS Codes"}
+                onClick={() => openWindow("VS Codes")}
             />
           </div>
 
