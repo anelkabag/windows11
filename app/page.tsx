@@ -14,6 +14,7 @@ import { QuickSettingsPanel } from "@/components/quick-settings-panel"
 import { AppWindow } from "@/components/app-window"
 import { MicrosoftStoreApp } from "@/components/apps/microsoft-store"
 import { SettingsApp } from "@/components/apps/settings-app"
+import { FileExplorerApp } from "@/components/apps/file-explorer"
 
 export default function Windows11() {
   const [startMenuOpen, setStartMenuOpen] = useState(false)
@@ -93,6 +94,7 @@ export default function Windows11() {
   const openWindow = (app: string) => {
     setActiveWindow(app)
     setStartMenuOpen(false)
+    setSearchOpen(false)
   }
 
   const closeWindow = () => {
@@ -109,6 +111,8 @@ export default function Windows11() {
         return <MicrosoftStoreApp />
       case "Settings":
         return <SettingsApp />
+      case "File Explorer":
+        return <FileExplorerApp />
       default:
         return null
     }
@@ -120,6 +124,8 @@ export default function Windows11() {
         return { width: 1000, height: 700 }
       case "Settings":
         return { width: 1000, height: 700 }
+      case "File Explorer":
+        return { width: 1000, height: 700 }
       default:
         return { width: 800, height: 600 }
     }
@@ -129,19 +135,14 @@ export default function Windows11() {
 
   return (
       <div className="relative h-screen w-full overflow-hidden bg-[#0078D7] select-none">
-
         <div className="absolute inset-0 z-0">
           <Image src="/images/background.png" alt="Windows 11 Wallpaper" fill className="object-cover" priority />
         </div>
 
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-6">
           <DesktopIcon name="Recycle Bin" icon="/images/recycle-bin.png" onClick={() => openWindow("Recycle Bin")} />
-          <DesktopIcon name="Microsoft Edge" icon="/images/IconEdge.png" onClick={() => openWindow("Microsoft Edge")} />
-          <DesktopIcon
-              name="File Explorer"
-              icon="/images/IconFolder.png"
-              onClick={() => openWindow("File Explorer")}
-          />
+          <DesktopIcon name="Microsoft Edge" icon="/images/edge.png" onClick={() => openWindow("Microsoft Edge")} />
+          <DesktopIcon name="File Explorer" icon="/images/IconFolder.png" onClick={() => openWindow("File Explorer")} />
           <DesktopIcon name="Settings" icon="/images/IconSetting.png" onClick={() => openWindow("Settings")} />
         </div>
 
@@ -172,7 +173,7 @@ export default function Windows11() {
             <div className="h-6 mx-1 border-r border-white/20" />
 
             <TaskbarIcon
-                icon="/images/IconEdge.png"
+                icon="/images/edge.png"
                 active={activeWindow === "Microsoft Edge"}
                 onClick={() => openWindow("Microsoft Edge")}
             />
@@ -195,7 +196,7 @@ export default function Windows11() {
 
           <div className="flex items-center gap-1" ref={wrapperRef}>
             <button className="p-1 rounded-md hover:bg-white/10 transition-all duration-200">
-              <ChevronUp className="w-4 h-4 text-white"/>
+              <ChevronUp className="w-4 h-4 text-white" />
             </button>
             <button className="p-1 rounded-md hover:bg-white/10 transition-all duration-200">
               <span className="text-white text-xs ml-1">ENG</span>
@@ -205,10 +206,10 @@ export default function Windows11() {
                 className={`p-1 rounded-md ${quickSettingsOpen ? "bg-white/20" : "hover:bg-white/10"} transition-all duration-200 flex items-center gap-2`}
             >
               <div className="flex items-center gap-2">
-                <Wifi className="w-4 h-4 text-white"/>
-                <Volume2 className="w-4 h-4 text-white"/>
+                <Wifi className="w-4 h-4 text-white" />
+                <Volume2 className="w-4 h-4 text-white" />
                 <div className="flex items-center">
-                  <Battery className="w-4 h-4 text-white"/>
+                  <Battery className="w-4 h-4 text-white" />
                 </div>
               </div>
             </button>
@@ -220,14 +221,14 @@ export default function Windows11() {
                 onClick={toggleNotifications}
                 className={`p-1 rounded-md ${notificationsOpen ? "bg-white/20" : "hover:bg-white/10"} transition-all duration-200`}
             >
-              <BellRing className="w-4 h-4 text-white"/>
+              <BellRing className="w-4 h-4 text-white" />
             </button>
           </div>
         </div>
 
-        <AnimatePresence>{startMenuOpen && <StartMenu onAppClick={openWindow}/>}</AnimatePresence>
+        <AnimatePresence>{startMenuOpen && <StartMenu onAppClick={openWindow} />}</AnimatePresence>
 
-        <AnimatePresence>{searchOpen && <SearchPanel/>}</AnimatePresence>
+        <AnimatePresence>{searchOpen && <SearchPanel />}</AnimatePresence>
 
         <AnimatePresence>{notificationsOpen && <NotificationsPanel />}</AnimatePresence>
 
