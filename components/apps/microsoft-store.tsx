@@ -26,7 +26,7 @@ export function MicrosoftStoreApp() {
   const games = [
     {
       title: "Microsoft Flight Simulator",
-      image: "/images/store/flight-simulator.jpg",
+      image: "/images/store/fightSimulator.jpg",
       tag: "Included with Game Pass",
     },
     {
@@ -36,8 +36,8 @@ export function MicrosoftStoreApp() {
     },
     {
       title: "Cooking Diary",
-      image: "/images/store/cooking-diary.jpg",
-      tag: "Cooking Game",
+      image: "/images/store/diary.jpg",
+      tag: "",
     },
     {
       title: "Roblox",
@@ -46,22 +46,22 @@ export function MicrosoftStoreApp() {
     },
     {
       title: "Death Stranding",
-      image: "/images/store/death-stranding.jpg",
+      image: "/images/store/death.jpg",
       tag: "",
     },
     {
       title: "Age of Empires IV",
-      image: "/images/store/age-of-empires.jpg",
+      image: "/images/store/ageAmpire.jpg",
       tag: "Included with Game Pass",
     },
     {
       title: "Little Kitty, Big City",
-      image: "/images/store/little-kitty.jpg",
+      image: "/images/store/bigCity.jpg",
       tag: "Included with Game Pass",
     },
     {
       title: "Age of Empires IV: Anniversary",
-      image: "/images/store/age-of-empires-2.jpg",
+      image: "/images/store/ageAmpire.jpg",
       tag: "Included with Game Pass",
     },
   ]
@@ -96,12 +96,12 @@ export function MicrosoftStoreApp() {
       <div className="flex flex-1 overflow-hidden">
 
         <div className="w-16 bg-[#2D2D2D] flex flex-col items-center py-2">
-          <SidebarItem icon="/images/store/home-icon.png" label="Home" active />
-          <SidebarItem icon="/images/store/gaming-icon.png" label="Gaming" />
-          <SidebarItem icon="/images/store/apps-icon.png" label="Apps" />
-          <SidebarItem icon="/images/store/new-icon.png" label="What's New" />
-          <SidebarItem icon="/images/store/downloads-icon.png" label="Downloads" />
-          <SidebarItem icon="/images/store/library-icon.png" label="Library" />
+          <SidebarItem icon="/images/store/home.png" label="Home" active />
+          <SidebarItem icon="/images/store/Games.png" label="Gaming" />
+          <SidebarItem icon="/images/store/Apps.png" label="Apps" />
+          <SidebarItem icon="/images/store/Video.png" label="Movie & TV" />
+          <SidebarItem icon="/images/store/librerie.png" label="library" />
+          <SidebarItem icon="/images/store/help.png" label="Help" />
         </div>
 
         <div className="flex-1 overflow-y-hidden p-3">
@@ -111,7 +111,7 @@ export function MicrosoftStoreApp() {
 
               <div className="relative flex-1 h-72 rounded-lg overflow-hidden">
                 <Image
-                  src={slides[activeSlide].image || "/placeholder.svg"}
+                  src={slides[activeSlide].image || "/images/store/robloxC.jpg"}
                   alt={slides[activeSlide].title}
                   fill
                   className="object-cover"
@@ -146,7 +146,7 @@ export function MicrosoftStoreApp() {
                 <div className="flex gap-4">
                   <div className="flex-1 h-[140px] bg-purple-900 rounded-lg relative overflow-hidden">
                     <Image
-                      src="/images/store/raid-shadow-legends.jpg"
+                      src="/images/store/raid.jpg"
                       alt="RAID: Shadow Legends"
                       fill
                       className="object-cover"
@@ -156,7 +156,7 @@ export function MicrosoftStoreApp() {
                     </div>
                   </div>
                   <div className="flex-1 h-[140px] bg-orange-900 rounded-lg relative overflow-hidden">
-                    <Image src="/images/store/cooking-fever.jpg" alt="Cooking Fever" fill className="object-cover" />
+                    <Image src="/images/store/fever.jpg" alt="Cooking Fever" fill className="object-cover" />
                     <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent">
                       <p className="text-xs">Cooking Fever</p>
                     </div>
