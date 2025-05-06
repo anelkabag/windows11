@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect, useRef } from "react"
 import { Battery, Wifi, Volume2, BellRing, ChevronUp, Search } from "lucide-react"
 import { AnimatePresence } from "framer-motion"
@@ -15,6 +17,8 @@ import { AppWindow } from "@/components/app-window"
 import { MicrosoftStoreApp } from "@/components/apps/microsoft-store"
 import { SettingsApp } from "@/components/apps/settings-app"
 import { FileExplorerApp } from "@/components/apps/file-explorer"
+import { EdgeBrowserApp } from "@/components/apps/edge-browser"
+import { ContextMenu } from "@/components/context-menu"
 
 export default function Windows11() {
   const [startMenuOpen, setStartMenuOpen] = useState(false)
@@ -32,7 +36,14 @@ export default function Windows11() {
   const [brightness, setBrightness] = useState(75)
   const [volume, setVolume] = useState(50)
 
+  const [contextMenu, setContextMenu] = useState<{ show: boolean; x: number; y: number }>({
+    show: false,
+    x: 0,
+    y: 0,
+  })
+
   const wrapperRef = useRef<HTMLDivElement>(null)
+  const desktopRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const updateTime = () => {
@@ -62,6 +73,22 @@ export default function Windows11() {
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [])
+
+  const handleContextMenu = (e: React.MouseEvent) => {
+
+    if (e.target === desktopRef.current || desktopRef.current?.contains(e.target as Node)) {
+      e.preventDefault()
+      setContextMenu({
+        show: true,
+        x: e.clientX,
+        y: e.clientY,
+      })
+    }
+  }
+
+  const closeContextMenu = () => {
+    setContextMenu({ ...contextMenu, show: false })
+  }
 
   const toggleStartMenu = () => {
     setStartMenuOpen(!startMenuOpen)
@@ -113,6 +140,8 @@ export default function Windows11() {
         return <SettingsApp />
       case "File Explorer":
         return <FileExplorerApp />
+      case "Microsoft Edge":
+        return <EdgeBrowserApp />
       default:
         return null
     }
@@ -126,6 +155,8 @@ export default function Windows11() {
         return { width: 1000, height: 700 }
       case "File Explorer":
         return { width: 1000, height: 700 }
+      case "Microsoft Edge":
+        return { width: 1000, height: 700 }
       default:
         return { width: 800, height: 600 }
     }
@@ -134,7 +165,11 @@ export default function Windows11() {
   const { width: windowWidth, height: windowHeight } = getWindowDimensions()
 
   return (
-      <div className="relative h-screen w-full overflow-hidden bg-[#0078D7] select-none">
+      <div
+          className="relative h-screen w-full overflow-hidden bg-[#0078D7] select-none"
+          onContextMenu={handleContextMenu}
+          ref={desktopRef}
+      >
         <div className="absolute inset-0 z-0">
           <Image src="/images/background.png" alt="Windows 11 Wallpaper" fill className="object-cover" priority />
         </div>
@@ -152,6 +187,10 @@ export default function Windows11() {
                 {renderAppContent()}
               </AppWindow>
           )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {contextMenu.show && <ContextMenu x={contextMenu.x} y={contextMenu.y} onClose={closeContextMenu} />}
         </AnimatePresence>
 
         <div className="absolute bottom-0 left-0 right-0 h-12 bg-black/30 backdrop-blur-xl z-20 flex items-center px-3 justify-between border-t border-white/10">
