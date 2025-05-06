@@ -104,7 +104,7 @@ export function AppWindow({ title, onClose, children, initialWidth = 800, initia
                             className="w-4 h-4"
                             onError={(e) => {
                                 const target = e.target as HTMLImageElement
-                                target.src = "/images/file-explorer.png"
+                                target.src = "/images/IconWindows.png"
                             }}
                         />
                         <span className="text-white text-sm">{title}</span>
