@@ -44,7 +44,7 @@ export function EdgeBrowserApp() {
 
     return (
         <div className="flex flex-col h-full bg-white text-black">
-            {/* Top navigation bar */}
+
             <div className="flex items-center p-1 px-2 bg-[#f3f3f3] border-b border-[#e0e0e0]">
                 <div className="flex items-center gap-1">
                     <button className="p-1 hover:bg-[#e0e0e0] rounded-sm">
@@ -58,7 +58,6 @@ export function EdgeBrowserApp() {
                     </button>
                 </div>
 
-                {/* Address bar */}
                 <div className="flex-1 mx-2 relative">
                     <div className="flex items-center bg-[#f3f3f3] border border-[#e0e0e0] rounded-md px-2 py-1">
                         <Search className="w-4 h-4 text-gray-500 mr-2" />
@@ -72,7 +71,6 @@ export function EdgeBrowserApp() {
                     </div>
                 </div>
 
-                {/* Right controls */}
                 <div className="flex items-center gap-1">
                     <button className="p-1 hover:bg-[#e0e0e0] rounded-sm">
                         <Star className="w-5 h-5" />
@@ -85,12 +83,9 @@ export function EdgeBrowserApp() {
                     </button>
                 </div>
 
-                {/* Window controls - these would be handled by the AppWindow component */}
             </div>
 
-            {/* Main content area */}
             <div className="flex flex-1 overflow-hidden">
-                {/* Left sidebar with tabs */}
                 <div className="w-[200px] bg-[#f9f9f9] border-r border-[#e0e0e0] flex flex-col">
                     {tabs.map((tab) => (
                         <div
@@ -119,7 +114,6 @@ export function EdgeBrowserApp() {
                         </div>
                     ))}
 
-                    {/* New tab button */}
                     <div className="flex items-center p-2 hover:bg-[#f0f0f0] border-b border-[#e0e0e0]">
                         <Plus className="w-5 h-5 mr-2" />
                         <span className="text-sm">New Tab</span>
@@ -127,12 +121,11 @@ export function EdgeBrowserApp() {
                     </div>
                 </div>
 
-                {/* Main content */}
                 <div className="flex-1 flex flex-col relative">
-                    {/* Background image */}
+
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src="/images/edge/edge-background.jpg"
+                            src="/images/bgBrows.png"
                             alt="Edge Background"
                             fill
                             className="object-cover"
@@ -140,9 +133,8 @@ export function EdgeBrowserApp() {
                         />
                     </div>
 
-                    {/* Content overlay */}
                     <div className="relative z-10 flex flex-col items-center pt-16 h-full">
-                        {/* Microsoft logo */}
+
                         <div className="flex items-center mb-6">
                             <Image
                                 src="/images/microsoft-logo.png"
@@ -157,7 +149,6 @@ export function EdgeBrowserApp() {
                             />
                         </div>
 
-                        {/* Search bar */}
                         <div className="w-[550px] bg-white rounded-full shadow-md mb-16 flex items-center p-1 pl-4">
                             <input type="text" placeholder="Search the web" className="flex-1 border-none outline-none text-sm" />
                             <button className="p-2 hover:bg-[#f0f0f0] rounded-full">
@@ -185,22 +176,7 @@ export function EdgeBrowserApp() {
                             </button>
                         </div>
 
-                        {/* Edge logo */}
-                        <div className="mb-16">
-                            <Image
-                                src="/images/edge/edge-logo.png"
-                                alt="Edge"
-                                width={120}
-                                height={120}
-                                className="w-28 h-28"
-                                onError={(e) => {
-                                    const target = e.target as HTMLImageElement
-                                    target.src = "/placeholder.svg?height=120&width=120"
-                                }}
-                            />
-                        </div>
 
-                        {/* Shortcuts */}
                         <div className="grid grid-cols-8 gap-4 mb-auto">
                             {shortcuts.map((shortcut, index) => (
                                 <div key={index} className="flex flex-col items-center">
@@ -225,7 +201,7 @@ export function EdgeBrowserApp() {
                             ))}
                         </div>
 
-                        {/* Bottom navigation */}
+
                         <div className="w-full mt-auto bg-[#f3f3f3] p-2 flex items-center justify-between">
                             <div className="flex items-center gap-4">
                                 {categories.map((category, index) => (
