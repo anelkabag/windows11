@@ -30,7 +30,7 @@ export default function Windows11() {
   const [activeWindow, setActiveWindow] = useState<string | null>(null)
   const [currentMedia, setCurrentMedia] = useState({
     title: "J'ai recoder Windows 11 dans le navigateur...",
-    author: "Anelka MD - YouTube ",
+    author: "Anelka Bag - YouTube ",
     isPlaying: true,
   })
   const [brightness, setBrightness] = useState(75)
@@ -171,7 +171,7 @@ export default function Windows11() {
           ref={desktopRef}
       >
         <div className="absolute inset-0 z-0">
-          <Image src="/images/background.png" alt="Windows 11 Wallpaper" fill className="object-cover" priority />
+          <Image src="/images/background.jpg" alt="Windows 11 Wallpaper" fill className="object-cover" priority />
         </div>
 
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-6">
